@@ -77,10 +77,10 @@ Creating an embedding of the default dataset with the default hyperparameter set
 ```
 python src/main.py
 ```
-Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
+Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds. This results in a 16x20=320 dimensional embedding.
 
 ```
-python src/main.py --dimensions 128 --iterations 20
+python src/main.py --dimensions 16 --iterations 20
 ```
 
 Creating an FSCNMF embedding of the default dataset with stronger regularization.
