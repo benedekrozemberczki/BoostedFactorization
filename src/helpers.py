@@ -32,6 +32,8 @@ def parameter_parser():
     parser.add_argument('--graph',
                         type = bool,
                         default = True,
+			dest='graph',
+			action='store_true',
 	                help = 'Is the target is a graph. Default is True.')
 
     parser.add_argument('--dimensions',
