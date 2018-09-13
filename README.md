@@ -72,25 +72,37 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 
 The following commands learn a graph embedding and write the embedding to disk. The node representations are ordered by the ID.
 
-Creating aN FSCNMF embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.
+Creating an embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.
 
 ```
 python src/main.py
 ```
-Creating an FSCNMF embedding of the default dataset with 128 dimensions and approximation order 1.
+Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
 
 ```
-python src/main.py --dimensions 128 --order 1
+python src/main.py --dimensions 128 --iterations 20
 ```
 
-Creating an FSCNMF embedding of the default dataset with asymmetric mixing.
+Creating an FSCNMF embedding of the default dataset with stronger regularization.
 
 ```
-python src/main.py --gamma 0.1
+python src/main.py --alpha 0.1
 ```
 
 Creating an embedding of an other dataset the `Wikipedia Dogs`. Saving the output in a custom folder.
 
 ```
-python src/main.py --edge-path input/dog_edges.csv --feature-path input/dog_features.csv --output-path output/dog_fscnmf.csv
+python src/main.py --input-path input/dog_edges.csv --output-path output/dog_fscnmf.csv
+```
+
+Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
+
+```
+python src/main.py --dimensions 128 --iterations 20
+```
+
+Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
+
+```
+python src/main.py --dimensions 128 --iterations 20
 ```
