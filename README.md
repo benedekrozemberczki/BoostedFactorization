@@ -33,9 +33,11 @@ sklearn           0.19.1
 
 #### Graphs
 
-The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Wikipedia Giraffes` is included in the  `input/` directory.
+The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Wikipedia Giraffes` is included in the `input/` directory.
 
 #### Sparse Matrices
+
+The code takes an input matrix in a csv file. Every row indicates a (user,item,score) separated by a comma. The first row is a header. Users and items should be indexed starting with 0, each score is positive. A sample sparse stochastic block matrix is included in the  `input/` folder.
 
 ### Options
 
@@ -44,25 +46,17 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Input and output options
 
 ```
-  --edge-path STR           Input graph path.           Default is `input/giraffe_edges.csv`.
-  --feature-path STR        Input Features path.        Default is `input/giraffe_features.csv`.
-  --output-path STR         Embedding path.             Default is `output/giraffe_fscnmf.csv`.
+  --input-path STR        Edges path.                        Default is `input/giraffe_edges.csv`.
+  --output-path STR       Embedding path.                    Default is `output/giraffe_embedding.csv`.
+  --graph BOOL            Whether the dataset is a graph.    Default is True.  
 ```
 
 #### Boosted Model options
 
 ```
-  --dimensions INT         Number of embeding dimensions.                     Default is 32.
-  --order INT              Order of adjacency matrix powers.                  Default is 3.
-  --iterations INT         Number of power interations.                       Default is 500.
-  --alpha_1 FLOAT          Alignment parameter for adjacency matrix.          Default is 1000.0.
-  --alpha_2 FLOAT          Adjacency basis regularization.                    Default is 1.0.
-  --alpha_3 FLOAT          Adjacency features regularization.                 Default is 1.0.
-  --beta_1  FLOAT          Alignment parameter for feature matrix.            Default is 1000.0.
-  --beta_2  FLOAT          Attribute basis regularization .                   Default is 1.0.
-  --beta_3  FLOAT          Attribute feature regularization.                  Default is 1.0.
-  --gamma FLOAT            Embedding mixing parameter.                        Default is 0.5.  
-  --lower-control FLOAT    Overflow control parameter.                        Default is 10**-15.  
+  --dimensions INT         Number of embeding dimensions.                     Default is 8.
+  --iterations INT         Number of power interations.                       Default is 10.
+  --alpha FLOAT            Regularization coefficient.                        Default is 0.001.
 ```
 
 #### DeepWalk options
@@ -71,6 +65,7 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
   --number-of-walks INT         Number of random walks.                  Default is 10.
   --walk-length INT             Random walk length.                      Default is 80.
   --window-size INT             Window size for feature extractions.     Default is 3.
+  --pruning-threshold INT       Minimal co-occurence count to be kept.   Default is 10.
 ```
 
 ### Examples
