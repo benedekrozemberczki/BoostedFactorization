@@ -48,7 +48,7 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 ```
   --input-path STR        Edges path.                        Default is `input/giraffe_edges.csv`.
   --output-path STR       Embedding path.                    Default is `output/giraffe_embedding.csv`.
-  --graph BOOL            Whether the dataset is a graph.    Default is True.  
+  --dataset-type STR      Whether the dataset is a graph.    Default is `graph`.  
 ```
 
 #### Boosted Model options
@@ -95,14 +95,14 @@ Creating an embedding of an other dataset the `Wikipedia Dogs`. Saving the outpu
 python src/main.py --input-path input/dog_edges.csv --output-path output/dog_fscnmf.csv
 ```
 
-Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
+Creating an embedding of the default dataset with 20 random walks per source and 120 nodes in each vertex sequence.
 
 ```
-python src/main.py --dimensions 128 --iterations 20
+python src/main.py --walk-length 120 --number-of-walks 20
 ```
 
-Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds.
+Creating an embedding of a non-graph dataset and storing it under a non-standard name.
 
 ```
-python src/main.py --dimensions 128 --iterations 20
+python src/main.py --dataset-type sparse --input-path input/small_block.csv --output-path output/block_embedding.csv
 ```
