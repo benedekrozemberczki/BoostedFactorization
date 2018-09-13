@@ -3,7 +3,7 @@ BoostedNE and L-EnsNMF
 <p align="justify">
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-This repository provides an implementation for FSCNMF as described in the papers:
+This repository provides an implementation for L-EnsNMF and BoostedNE as described in the papers:
 > Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.
 > Jundong Li, Liang Wu and Huan Liu
 > ICDM, 2018.
