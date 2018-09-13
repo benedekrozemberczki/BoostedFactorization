@@ -31,7 +31,11 @@ sklearn           0.19.1
 
 ### Datasets
 
+#### Graphs
+
 The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Wikipedia Giraffes` is included in the  `input/` directory.
+
+#### Sparse Matrices
 
 ### Options
 
