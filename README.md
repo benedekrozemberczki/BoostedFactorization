@@ -1,19 +1,20 @@
-BoostedNE and L-EnsNMF
+L-EnsNMF and BoostedNE
 ============================================
 <p align="justify">
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+
+The factorization procedure L-EnsNMF creates creates a sequential ensemble factorization of a target matrix. In each factorization round a residual target matrix is created by sampling an anchor row and column. Anchor sampling finds a block of matrix entries that are similar to the row and column and other entries of the residual matrix are downsampled. By factorizing the residuals matrices each relatively upsampled block gets a high quality representation. BoostedNE adapts this idea for node embedding. An approximate target matrix obtained with truncated random walk sampling is factorized by the L-EnsNMF method. This way blocks of highly connected nodes get representations that are described by vectors obtained in a given boosting round. Specifically, my implementation assumes that the target matrices are sparse. So far this is the only publicly available Python implementation of these procedures.
 
 This repository provides an implementation for L-EnsNMF and BoostedNE as described in the papers:
-> Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.
-> Jundong Li, Liang Wu and Huan Liu
-> ICDM, 2018.
-> https://arxiv.org/abs/1808.08627
-
 
 > L-EnsNMF: Boosted Local Topic Discovery via Ensemble of Nonnegative Matrix Factorization
 > Sangho Suh, Jaegul Choo, Joonseok Lee, Chandan K. Reddy
 > ICDM, 2016.
 > http://dmkd.cs.vt.edu/papers/ICDM16.pdf
+
+> Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.
+> Jundong Li, Liang Wu and Huan Liu
+> ICDM, 2018.
+> https://arxiv.org/abs/1808.08627
 
 ### Requirements
 
