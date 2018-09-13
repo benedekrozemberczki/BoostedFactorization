@@ -26,6 +26,7 @@ pandas            0.20.3
 texttable         1.2.1
 scipy             1.1.0
 argparse          1.1.0
+sklearn           0.19.1
 ```
 
 ### Datasets
