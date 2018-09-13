@@ -30,7 +30,6 @@ def parameter_parser():
 	                help = 'Input folder with jsons.')
 	
     parser.add_argument('--graph',
-                        type = bool,
                         default = True,
 			dest='graph',
 			action='store_true',
