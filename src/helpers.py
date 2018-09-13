@@ -28,6 +28,11 @@ def parameter_parser():
                         nargs = '?',
                         default = './output/giraffe_embedding.csv',
 	                help = 'Input folder with jsons.')
+	
+    parser.add_argument('--graph',
+                        type = bool,
+                        default = True,
+	                help = 'Is the target is a graph. Default is True.')
 
     parser.add_argument('--dimensions',
                         type = int,
@@ -64,10 +69,6 @@ def parameter_parser():
                         default = 10,
 	                help = 'Co-occurence pruning rule. Default is 10.')
 
-    parser.add_argument('--graph',
-                        type = bool,
-                        default = True,
-	                help = 'Is the target is a graph. Default is True.')
     
     return parser.parse_args()
 
