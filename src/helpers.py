@@ -29,11 +29,10 @@ def parameter_parser():
                         default = './output/giraffe_embedding.csv',
 	                help = 'Input folder with jsons.')
 	
-    parser.add_argument('--graph',
-                        default = True,
-			dest='graph',
-			action='store_true',
-	                help = 'Is the target is a graph. Default is True.')
+    parser.add_argument('--dataset-type',
+                        nargs = '?',
+                        default = 'graph',
+	                help = 'Type of the dataset. Default is graph.')
 
     parser.add_argument('--dimensions',
                         type = int,
@@ -193,6 +192,4 @@ class DeepWalker:
         index_2 = map(lambda x: x[1],self.container.keys())
         scores = self.container.values()
         self.A = sparse.csr_matrix(sparse.coo_matrix((scores,(index_1,index_2)),shape=self.shape,dtype=np.float32))
-   
 
-    

@@ -6,7 +6,7 @@ def learn_boosted_embeddings(args):
     Method to create a boosted matrix/network embedding.
     :param args: Arguments object.
     """
-    if args.graph == True:
+    if args.dataset_type == "graph":
         A = DeepWalker(args).A
     else:
         A = read_matrix(args.input_path)

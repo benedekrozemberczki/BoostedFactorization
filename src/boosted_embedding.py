@@ -95,7 +95,7 @@ class BoostedFactorization:
         for iteration in range(self.args.iterations):
             print("\nFitting model: " + str(iteration+1) +"/" +str(self.args.iterations)+".")
             self.single_boosting_round(iteration)
-            simple_print("Boosting round "+str(iteration)+". loss",self.residuals.sum())
+            simple_print("Boosting round "+str(iteration+1)+". loss",self.residuals.sum())
 
     def save_embedding(self):
         """
