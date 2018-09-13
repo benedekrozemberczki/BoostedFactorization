@@ -54,9 +54,9 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Boosted Model options
 
 ```
-  --dimensions INT         Number of embeding dimensions.                     Default is 8.
-  --iterations INT         Number of power interations.                       Default is 10.
-  --alpha FLOAT            Regularization coefficient.                        Default is 0.001.
+  --dimensions INT         Number of embeding dimensions.   Default is 8.
+  --iterations INT         Number of power interations.     Default is 10.
+  --alpha FLOAT            Regularization coefficient.      Default is 0.001.
 ```
 
 #### DeepWalk options
