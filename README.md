@@ -17,7 +17,6 @@ This repository provides an implementation for L-EnsNMF and BoostedNE as describ
 
 > Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.
 > Jundong Li, Liang Wu and Huan Liu
-> ICDM, 2018.
 > https://arxiv.org/abs/1808.08627
 
 ### Requirements
