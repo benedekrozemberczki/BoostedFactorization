@@ -50,26 +50,26 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Input and output options
 
 ```
-  --input-path STR        Edges path.                        Default is `input/giraffe_edges.csv`.
-  --output-path STR       Embedding path.                    Default is `output/giraffe_embedding.csv`.
-  --dataset-type STR      Whether the dataset is a graph.    Default is `graph`.  
+  --input-path    STR      Edges path.                        Default is `input/giraffe_edges.csv`.
+  --output-path   STR      Embedding path.                    Default is `output/giraffe_embedding.csv`.
+  --dataset-type  STR      Whether the dataset is a graph.    Default is `graph`.  
 ```
 
 #### Boosted Model options
 
 ```
-  --dimensions INT         Number of embeding dimensions.   Default is 8.
-  --iterations INT         Number of power interations.     Default is 10.
-  --alpha FLOAT            Regularization coefficient.      Default is 0.001.
+  --dimensions   INT         Number of embeding dimensions.   Default is 8.
+  --iterations   INT         Number of power interations.     Default is 10.
+  --alpha        FLOAT       Regularization coefficient.      Default is 0.001.
 ```
 
 #### DeepWalk options
 
 ```
-  --number-of-walks INT         Number of random walks.                  Default is 10.
-  --walk-length INT             Random walk length.                      Default is 80.
-  --window-size INT             Window size for feature extractions.     Default is 3.
-  --pruning-threshold INT       Minimal co-occurence count to be kept.   Default is 10.
+  --number-of-walks     INT      Number of random walks.                  Default is 10.
+  --walk-length         INT      Random walk length.                      Default is 80.
+  --window-size         INT      Window size for feature extractions.     Default is 3.
+  --pruning-threshold   INT      Minimal co-occurence count to be kept.   Default is 10.
 ```
 
 ### Examples
