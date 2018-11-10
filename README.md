@@ -21,13 +21,13 @@ This repository provides an implementation for L-EnsNMF and BoostedNE as describ
 
 ### Requirements
 
-The codebase is implemented in Python 2.7. package versions used for development are just below.
+The codebase is implemented in Python 3.5.2. The package versions used for development are just below.
 ```
 networkx          1.11
-tqdm              4.19.5
-numpy             1.13.3
-pandas            0.20.3
-texttable         1.2.1
+tqdm              4.28.1
+numpy             1.15.4
+pandas            0.23.4
+texttable         1.5.0
 scipy             1.1.0
 argparse          1.1.0
 sklearn           0.19.1
