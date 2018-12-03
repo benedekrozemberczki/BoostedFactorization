@@ -79,8 +79,8 @@ def tab_printer(args):
     """
     args = vars(args)
     t = Texttable() 
-    t.add_rows([["Parameter", "Value"]] +  [[k.replace("_"," ").capitalize(),v] for k,v in args.iteritems()])
-    print t.draw()
+    t.add_rows([["Parameter", "Value"]] +  [[k.replace("_"," ").capitalize(),v] for k,v in args.items()])
+    print(t.draw())
 
 def simple_print(name,value):
     """
@@ -91,7 +91,7 @@ def simple_print(name,value):
     print("\n")
     t = Texttable() 
     t.add_rows([[name, value]])
-    print t.draw()
+    print(t.draw())
 
 def sampling(probs):
     """
@@ -187,9 +187,9 @@ class DeepWalker:
         for walk in tqdm(self.walks):
             self.container.append(self.processor(walk))
         self.container = Counter([pair for pairs in self.container for pair in pairs])
-        self.container = {k:v for k,v in self.container.iteritems() if v > self.args.pruning_threshold}
-        index_1 = map(lambda x: x[0],self.container.keys())
-        index_2 = map(lambda x: x[1],self.container.keys())
-        scores = self.container.values()
+        self.container = {k:v for k,v in self.container.items() if v > self.args.pruning_threshold}
+        index_1 = [x[0] for x, v in self.container.items()]
+        index_2 = [x[1] for x, v in self.container.items()]
+        scores = [v for k,v in self.container.items()]
         self.A = sparse.csr_matrix(sparse.coo_matrix((scores,(index_1,index_2)),shape=self.shape,dtype=np.float32))
 

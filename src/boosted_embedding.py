@@ -67,7 +67,7 @@ class BoostedFactorization:
         W = model.fit_transform(new_residuals)
         H = model.components_
         print("Scoring started.\n")
-        scores = [max(0.0,self.residuals[edge[0],edge[1]]-np.dot(W[edge[0],:],H[:,edge[1]])) for edge in tqdm(self.edges)]
+        scores = np.maximum(self.residuals.data - np.sum(np.multiply(W[self.index_1,:],H[:,self.index_2].T),axis=1),0)
         scores = sparse.csr_matrix((scores,(self.index_1,self.index_2)),shape=self.shape,dtype=np.float32)
         return scores, W
 
@@ -104,7 +104,7 @@ class BoostedFactorization:
         ids = np.array(range(self.residuals.shape[0])).reshape(-1,1)
         self.embeddings = [ids] + self.embeddings
         self.embeddings = np.concatenate(self.embeddings,axis = 1)
-        feature_names = map(lambda x: "x_"+str(x), range(self.args.iterations*self.args.dimensions)) 
+        feature_names = [ "x_"+str(x) for x in range(self.args.iterations*self.args.dimensions)]
         columns = ["ID"] + feature_names
         self.embedding = pd.DataFrame(self.embeddings, columns = columns)
         self.embedding.to_csv(self.args.output_path, index = None)
