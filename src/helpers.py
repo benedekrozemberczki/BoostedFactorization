@@ -19,55 +19,55 @@ def parameter_parser():
     parser = argparse.ArgumentParser(description = "Run LENS-NMF.")
 
 
-    parser.add_argument('--input-path',
-                        nargs = '?',
-                        default = './input/giraffe_edges.csv',
-	                help = 'Input folder with jsons.')
+    parser.add_argument("--input-path",
+                        nargs = "?",
+                        default = "./input/giraffe_edges.csv",
+	                help = "Input folder with jsons.")
 
-    parser.add_argument('--output-path',
-                        nargs = '?',
-                        default = './output/giraffe_embedding.csv',
-	                help = 'Input folder with jsons.')
+    parser.add_argument("--output-path",
+                        nargs = "?",
+                        default = "./output/giraffe_embedding.csv",
+	                help = "Input folder with jsons.")
 	
-    parser.add_argument('--dataset-type',
-                        nargs = '?',
-                        default = 'graph',
-	                help = 'Type of the dataset. Default is graph.')
+    parser.add_argument("--dataset-type",
+                        nargs = "?",
+                        default = "graph",
+	                help = "Type of the dataset. Default is graph.")
 
-    parser.add_argument('--dimensions',
+    parser.add_argument("--dimensions",
                         type = int,
                         default = 8,
-	                help = 'Number of dimensions. Default is 8.')
+	                help = "Number of dimensions. Default is 8.")
 
-    parser.add_argument('--alpha',
+    parser.add_argument("--alpha",
                         type = float,
                         default = 0.001,
-	                help = 'Regularization coefficient. Default is 0.001.')
+	                help = "Regularization coefficient. Default is 0.001.")
 
-    parser.add_argument('--window-size',
+    parser.add_argument("--window-size",
                         type = int,
                         default = 3,
-	                help = 'Skip-gram window size. Default is 3.')
+	                help = "Skip-gram window size. Default is 3.")
 
-    parser.add_argument('--walk-length',
+    parser.add_argument("--walk-length",
                         type = int,
                         default = 80,
-	                help = 'Truncated random walk length. Default is 80.')
+	                help = "Truncated random walk length. Default is 80.")
 
-    parser.add_argument('--number-of-walks',
+    parser.add_argument("--number-of-walks",
                         type = int,
                         default = 10,
-	                help = 'Number of random walks per source. Default is 10.')
+	                help = "Number of random walks per source. Default is 10.")
 
-    parser.add_argument('--iterations',
+    parser.add_argument("--iterations",
                         type = int,
                         default = 10,
-	                help = 'Number of boosting rounds. Default is 10.')
+	                help = "Number of boosting rounds. Default is 10.")
 
-    parser.add_argument('--pruning-threshold',
+    parser.add_argument("--pruning-threshold",
                         type = int,
                         default = 10,
-	                help = 'Co-occurence pruning rule. Default is 10.')
+	                help = "Co-occurence pruning rule. Default is 10.")
 
     
     return parser.parse_args()
@@ -105,7 +105,7 @@ def sampling(probs):
         score = score + value
         if prob <= score:
             return key
-    assert False, 'unreachable'
+    assert False, "unreachable"
 
 def read_matrix(path):
     """

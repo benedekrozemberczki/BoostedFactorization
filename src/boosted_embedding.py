@@ -17,7 +17,7 @@ class BoostedFactorization:
         """
         self.args = args
         self.residuals = residuals
-        simple_print("Matrix sum",self.residuals.sum())        
+        simple_print("Matrix sum: ", self.residuals.sum())        
         self.shape = residuals.shape
         indices =  self.residuals.nonzero()
         self.index_1 = indices[0]
@@ -63,7 +63,7 @@ class BoostedFactorization:
         :return W: Embedding matrix.
         """
         
-        model = NMF(n_components=self.args.dimensions, init='random', verbose=False, alpha=self.args.alpha)
+        model = NMF(n_components=self.args.dimensions, init="random", verbose=False, alpha=self.args.alpha)
         W = model.fit_transform(new_residuals)
         H = model.components_
         print("Scoring started.\n")
