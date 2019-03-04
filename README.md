@@ -87,7 +87,7 @@ Creating an embedding of the default dataset with 16 dimensions and 20 boosting 
 python src/main.py --dimensions 16 --iterations 20
 ```
 
-Creating an FSCNMF embedding of the default dataset with stronger regularization.
+Creating an Lens-NMF embedding of the default dataset with stronger regularization.
 
 ```
 python src/main.py --alpha 0.1
