@@ -96,7 +96,7 @@ python src/main.py --alpha 0.1
 Creating an embedding of an other dataset the `Wikipedia Dogs`. Saving the output in a custom folder.
 
 ```
-python src/main.py --input-path input/dog_edges.csv --output-path output/dog_fscnmf.csv
+python src/main.py --input-path input/dog_edges.csv --output-path output/dog_lensnmf.csv
 ```
 
 Creating an embedding of the default dataset with 20 random walks per source and 120 nodes in each vertex sequence.
