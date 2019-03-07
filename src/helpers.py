@@ -190,4 +190,3 @@ class DeepWalker:
         index_2 = [x[1] for x, v in self.container.items()]
         scores = [v for k,v in self.container.items()]
         self.A = sparse.csr_matrix(sparse.coo_matrix((scores,(index_1,index_2)),shape=self.shape,dtype=np.float32))
-
