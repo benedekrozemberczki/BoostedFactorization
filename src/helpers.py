@@ -22,7 +22,7 @@ def parameter_parser():
     parser.add_argument("--input-path",
                         nargs = "?",
                         default = "./input/giraffe_edges.csv",
-	                help = "Input folder with jsons.")
+	                help = "Input edge list.")
 
     parser.add_argument("--output-path",
                         nargs = "?",
