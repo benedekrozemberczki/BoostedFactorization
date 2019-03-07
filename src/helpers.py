@@ -9,13 +9,11 @@ from collections import Counter
 from texttable import Texttable
 
 def parameter_parser():
-
     """
     A method to parse up command line parameters. By default it gives an embedding of the Wikipedia Giraffes graph.
     The default hyperparameters give a good quality representation without grid search.
     Representations are sorted by ID.
     """
-
     parser = argparse.ArgumentParser(description = "Run LENS-NMF.")
 
 
