@@ -27,7 +27,7 @@ def parameter_parser():
     parser.add_argument("--output-path",
                         nargs = "?",
                         default = "./output/giraffe_embedding.csv",
-	                help = "Input folder with jsons.")
+	                help = "Embedding csv files.")
 	
     parser.add_argument("--dataset-type",
                         nargs = "?",
