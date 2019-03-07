@@ -174,8 +174,6 @@ class DeepWalker:
             sources = walk[0:len(walk)-omega]
             nebs = walk[omega:]
             pairs = pairs + [(source,nebs[i]) for i, source in enumerate(sources)] +[(nebs[i],source) for i, source in enumerate(sources)]
-                
-
         return pairs
 
     def do_processing(self):
