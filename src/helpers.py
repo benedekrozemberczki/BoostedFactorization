@@ -116,7 +116,7 @@ def read_matrix(path):
     dataset = pd.read_csv(path).values.tolist()
     index_1 = [x[0] for x in dataset]
     index_2 = [x[1] for x in dataset]
-    scores = [x[0] for x in dataset]
+    scores = [x[2] for x in dataset]
     shape = (max(index_1) + 1,max(index_2)+1)
     scores = sparse.csr_matrix(sparse.coo_matrix((scores,(index_1,index_2)),shape=shape,dtype=np.float32))
     return scores
