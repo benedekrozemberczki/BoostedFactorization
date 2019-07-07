@@ -19,6 +19,8 @@ This repository provides an implementation for L-EnsNMF and BoostedNE as describ
 > Jundong Li, Liang Wu and Huan Liu
 > https://arxiv.org/abs/1808.08627
 
+The original Matlab implementation is available [[here]](https://github.com/sanghosuh/lens_nmf-matlab).
+
 ### Requirements
 
 The codebase is implemented in Python 3.5.2. The package versions used for development are just below.
