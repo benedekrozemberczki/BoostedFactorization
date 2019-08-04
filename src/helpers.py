@@ -1,9 +1,9 @@
-import argparse
 import random
-import networkx as nx
-import pandas as pd
+import argparse
 import numpy as np
+import pandas as pd
 from tqdm import tqdm
+import networkx as nx
 from scipy import sparse
 from collections import Counter
 from texttable import Texttable
