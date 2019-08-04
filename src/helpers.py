@@ -16,7 +16,6 @@ def parameter_parser():
     """
     parser = argparse.ArgumentParser(description = "Run LENS-NMF.")
 
-
     parser.add_argument("--input-path",
                         nargs = "?",
                         default = "./input/giraffe_edges.csv",
