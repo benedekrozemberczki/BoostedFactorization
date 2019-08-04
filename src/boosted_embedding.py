@@ -4,8 +4,8 @@ import pandas as pd
 import networkx as nx
 from tqdm import tqdm
 from scipy import sparse
-from helpers import sampling, simple_print
 from sklearn.decomposition import NMF
+from helpers import sampling, simple_print
 
 class BoostedFactorization:
     """
