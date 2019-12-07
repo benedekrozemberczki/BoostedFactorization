@@ -1,3 +1,5 @@
+"""Running the boosted machine."""
+
 from helpers import parameter_parser,tab_printer, read_matrix, DeepWalker
 from boosted_embedding import BoostedFactorization
 
