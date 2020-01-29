@@ -7,6 +7,7 @@ The factorization procedure L-EnsNMF creates a sequential ensemble factorization
   <img width="800" src="boosting.png">
 </p>
 
+The model is now also available in the package [Karate Club](https://github.com/benedekrozemberczki/karateclub).
 
 This repository provides an implementation for L-EnsNMF and BoostedNE as described in the papers:
 
