@@ -82,35 +82,35 @@ The following commands learn a graph embedding and write the embedding to disk. 
 
 Creating an embedding of the default dataset with the default hyperparameter settings. Saving the embedding at the default path.
 
-```
-python src/main.py
+```sh
+$ python src/main.py
 ```
 Creating an embedding of the default dataset with 16 dimensions and 20 boosting rounds. This results in a 16x20=320 dimensional embedding.
 
-```
-python src/main.py --dimensions 16 --iterations 20
+```sh
+$ python src/main.py --dimensions 16 --iterations 20
 ```
 
 Creating an Lens-NMF embedding of the default dataset with stronger regularization.
 
-```
-python src/main.py --alpha 0.1
+```sh
+$ python src/main.py --alpha 0.1
 ```
 
 Creating an embedding of an other dataset the `Wikipedia Dogs`. Saving the output in a custom folder.
 
-```
-python src/main.py --input-path input/dog_edges.csv --output-path output/dog_lensnmf.csv
+```sh
+$ python src/main.py --input-path input/dog_edges.csv --output-path output/dog_lensnmf.csv
 ```
 
 Creating an embedding of the default dataset with 20 random walks per source and 120 nodes in each vertex sequence.
 
-```
-python src/main.py --walk-length 120 --number-of-walks 20
+```sh
+$ python src/main.py --walk-length 120 --number-of-walks 20
 ```
 
 Creating an embedding of a non-graph dataset and storing it under a non-standard name.
 
-```
-python src/main.py --dataset-type sparse --input-path input/small_block.csv --output-path output/block_embedding.csv
+```sh
+$ python src/main.py --dataset-type sparse --input-path input/small_block.csv --output-path output/block_embedding.csv
 ```
