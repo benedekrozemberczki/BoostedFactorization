@@ -13,12 +13,12 @@ The model is now also available in the package [Karate Club](https://github.com/
 
 This repository provides an implementation for L-EnsNMF and BoostedNE as described in the papers:
 
-> L-EnsNMF: Boosted Local Topic Discovery via Ensemble of Nonnegative Matrix Factorization
+> **L-EnsNMF: Boosted Local Topic Discovery via Ensemble of Nonnegative Matrix Factorization.**
 > Sangho Suh, Jaegul Choo, Joonseok Lee, Chandan K. Reddy
 > ICDM, 2016.
 > http://dmkd.cs.vt.edu/papers/ICDM16.pdf
 
-> Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.
+> **Multi-Level Network Embedding with Boosted Low-Rank Matrix Approximation.**
 > Jundong Li, Liang Wu and Huan Liu
 > ASONAM, 2019.
 > https://arxiv.org/abs/1808.08627
