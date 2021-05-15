@@ -122,3 +122,5 @@ $ python src/main.py --dataset-type sparse --input-path input/small_block.csv --
 **License**
 
 - [GNU License](https://github.com/benedekrozemberczki/BoostedFactorization/blob/master/LICENSE)
+
+--------------------------------------------------------------------------------
