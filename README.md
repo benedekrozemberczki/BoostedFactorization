@@ -117,7 +117,7 @@ Creating an embedding of a non-graph dataset and storing it under a non-standard
 $ python src/main.py --dataset-type sparse --input-path input/small_block.csv --output-path output/block_embedding.csv
 ```
 
---------------------------------------------------------------------------------
+------------------------------------------------------
 
 **License**
 
