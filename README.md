@@ -1,5 +1,5 @@
 L-EnsNMF and BoostedNE
-======================
+==================
 [![Arxiv](https://img.shields.io/badge/ArXiv-1808.08627-orange.svg)](https://arxiv.org/abs/1808.08627) [![codebeat badge](https://codebeat.co/badges/19d86143-629a-474f-87f2-6e78d9f8fc62)](https://codebeat.co/projects/github-com-benedekrozemberczki-boostedfactorization-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/BoostedFactorization.svg)](https://github.com/benedekrozemberczki/BoostedFactorization/archive/master.zip)⠀[![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)
 
 <p align="justify">
